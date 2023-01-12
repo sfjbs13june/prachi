@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.prachi.app.AppTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.prachi.app.AppTest" time="0.01" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,5 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.prachi.app.AppTest" name="testApp" time="0.007"/>
+  <testcase classname="com.prachi.app.AppTest" name="testSayWelcome" time="0.01"/>
+  <testcase classname="com.prachi.app.AppTest" name="testSayHello" time="0"/>
+  <testcase classname="com.prachi.app.AppTest" name="testSayHi" time="0"/>
+  <testcase classname="com.prachi.app.AppTest" name="testSayBye" time="0"/>
 </testsuite>
