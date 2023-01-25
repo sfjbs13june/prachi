@@ -23,11 +23,6 @@ $ docker stop <container-ID>
 $ docker rm <container-ID>
 ```
 
-## Running the application
-```
-$ docker run <Repository>:<tag>
-```
-
 ## Removing the image
 ```
 $ docker rmi <IMAGE ID>
@@ -48,9 +43,9 @@ $ docker run <Repository>:<tag>
 $ docker pull <Repo>:<tag>
 ```
 
-### Running the application in docker container with port
+## Running the application in docker container with port
 ```
-$ docker run -p 8080:8080 prachi04/hospital-app:0.0.1-SNAPSHOT
+$ docker run -p 8080:8080 <Repository>:<tag>
 ```
 
 ## Container Inspection
