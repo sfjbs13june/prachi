@@ -30,22 +30,22 @@ $ docker run <Repository>:<tag>
 
 ## Removing the image
 ```
-docker rmi <IMAGE ID>
+$ docker rmi <IMAGE ID>
 ```
 
 ## Pushing the image to hub
 ```
-docker push  <REPOSITORY>:<TAG>
+$ docker push  <REPOSITORY>:<TAG>
 ```
 
 ## Running the application
 ``` 
-docker run <Repository>:<tag>
+$ docker run <Repository>:<tag>
 ```
 
 ## Pulling the image from hub
 ``` 
-docker pull <Repo>:<tag>
+$ docker pull <Repo>:<tag>
 ```
 
 ### Running the application in docker container with port
@@ -55,7 +55,7 @@ $ docker run -p 8080:8080 prachi04/hospital-app:0.0.1-SNAPSHOT
 
 ## Container Inspection
 ``` 
-docker exec -ti <container-id> /bin/sh
+$ docker exec -ti <container-id> /bin/sh
 ```
 
 
