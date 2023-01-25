@@ -27,8 +27,8 @@ public class PrescriptionController {
     @PostMapping("/saveprescription")
     public Map mapprescriptions() {
         Map Mapprescription = new HashMap();
-        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription);
-        Appointment appointment2 = new Appointment("2","pat2","doc1","25-01-2023",prescription);
+        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription1);
+        Appointment appointment2 = new Appointment("2","pat2","doc1","25-01-2023",prescription2);
         Mapprescription.put(prescription1.getDescription(), appointment1);
         Mapprescription.put(prescription2.getDescription(),appointment2);
         return Mapprescription;

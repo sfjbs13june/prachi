@@ -18,8 +18,8 @@ public class PatientController {
     @GetMapping("/patient")
     public List<Appointment> getPatients(){
         List listpatients= new ArrayList();
-        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription);
-        Appointment appointment2 = new Appointment("2","pat2","doc1","25-01-2023",prescription);
+        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription1);
+        Appointment appointment2 = new Appointment("2","pat2","doc1","25-01-2023",prescription2);
         listpatients.add(appointment1.getPatientName());
         listpatients.add(appointment2.getPatientName());
         return listpatients;
@@ -28,7 +28,7 @@ public class PatientController {
     @PostMapping("/myappointment")
     public Map mapPatient1() {
         Map MapPatient1 = new HashMap();
-        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription);
+        Appointment appointment1 = new Appointment("1", "pat1", "doc1", "25-01-2023", prescription1);
         Appointment appointment2 = new Appointment("2","pat2","doc2","25-01-2023",prescription2);
         MapPatient1.put(appointment1.getPatientName(), appointment1);
         MapPatient1.put(appointment2.getPatientName(),appointment2);
