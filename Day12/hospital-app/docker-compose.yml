@@ -1,0 +1,7 @@
+version: '3'
+services:
+  hospital-app:
+    image: prachi04/hospital-app:1.0.0
+    container_name: hospital-app
+    ports:
+      - "8080:8080"
