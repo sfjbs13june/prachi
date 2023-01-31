@@ -8,9 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class Appointment {
 
-
+    @Id
     @Column(name = "appointmentId")
-    private String appointmentId;
+    private int appointmentId;
     @Column(name = "patientName")
     private String patientName;
     @Column(name = "doctorName")
@@ -22,11 +22,11 @@ public class Appointment {
     public Appointment() {
     }
 
-    public String getAppointmentId() {
+    public int getAppointmentId() {
         return appointmentId;
     }
 
-    public void setAppointmentId(String appointmentId) {
+    public void setAppointmentId(int appointmentId) {
         this.appointmentId = appointmentId;
     }
 

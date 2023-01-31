@@ -7,28 +7,29 @@ import javax.persistence.Id;
 
 @Entity
 public class Prescription {
-    @Column(name = "pres id")
-    private String prescriptionId;
+    @Id
+    @Column(name = "prescriptionId")
+    private int prescriptionId;
 
-    @Column(name = "appointment id")
+    @Column(name = "appointmenIid")
     private String appointmentId;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "pat name")
+    @Column(name = "patientName")
     private String patientName;
 
-    @Column(name ="doc name")
+    @Column(name ="doctorName")
     private String doctorName;
 
     public Prescription(){}
 
-    public String getPrescriptionId() {
+    public int getPrescriptionId() {
         return prescriptionId;
     }
 
-    public void setPrescriptionId(String prescriptionId) {
+    public void setPrescriptionId(int prescriptionId) {
         this.prescriptionId = prescriptionId;
     }
 

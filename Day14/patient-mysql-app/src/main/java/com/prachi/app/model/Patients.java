@@ -8,20 +8,26 @@ import javax.persistence.Id;
 @Entity
 public class Patients {
 
+    @Id
     @Column(name = "id")
-    private String id;
+    private int id;
     @Column(name = "name")
     private String name;
     @Column(name = "age")
     private String age;
     @Column(name = "gender")
-    private String gender;;
+    private String gender;
+    @Column(name = "disease")
+    String disease;
 
-    public String getId() {
+    public Patients() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -57,11 +63,7 @@ public class Patients {
         this.disease = disease;
     }
 
-    @Column(name = "disease")
-    String disease;
 
-    public Patients() {
-    }
 
 
 }
