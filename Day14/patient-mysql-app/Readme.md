@@ -1,6 +1,7 @@
-#Build
-
-mvn clean install
+# Build
+```
+mvn clean install 
+```
 
 # Run
 ```
@@ -12,17 +13,17 @@ docker-compose -f docker-compose-mysql.yml down
 
 ```
 # training
-##POST
 
+##Post
 ```
-curl -X POST \
-http://localhost:8081/user/create -H 'content-type: application/json' -d '{"name": "Rama","teamName": "beta","salary": 23000 }'
-
+curl --location --request POST 'localhost:8081/patient/save' \
+--header 'Content-Type: application/json' \
+--data-raw '{"name": "abc", "age":"25", "gender" : "female", "disease":"cold"}'
 ```
 ## Get 
 
 ```
-curl -X GET http://localhost:8081/user/read 
+localhost:8081/patient/read
 ```
 
 ## Getting inside container
