@@ -1,4 +1,4 @@
-package com.tanu.methods.RestOperations;
+package com.prachi.app;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
