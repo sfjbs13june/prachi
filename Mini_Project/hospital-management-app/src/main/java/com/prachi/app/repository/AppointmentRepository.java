@@ -1,14 +1,17 @@
 package com.prachi.app.repository;
 
 import com.prachi.app.model.Appointment;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
-    @Repository
+
+@Repository
     public interface AppointmentRepository extends MongoRepository<Appointment, String> {
         public Appointment save(Appointment appointment);
+        public List<Appointment> findByDoctorName(String doctorName);
+        public List<Appointment> findByPatientName(String patientName);
 
 
     }

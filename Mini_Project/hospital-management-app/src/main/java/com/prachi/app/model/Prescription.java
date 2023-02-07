@@ -1,15 +1,14 @@
 package com.prachi.app.model;
 
 import org.springframework.stereotype.Component;
-
 @Component
 public class Prescription {
 
-    String prescriptionId;
-    String appointmentId;
-    String description;
-    String patientName;
-    String doctorName;
+    private String prescriptionId;
+    private String appointmentId;
+    private String description;
+    private String patientName;
+    private String doctorName;
 
 
     public Prescription(){}

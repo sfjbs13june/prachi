@@ -5,14 +5,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Appointment {
 
-    String appointmentId;
-    String patientName;
-    static String doctorName;
-    String date;
-    Prescription prescription;
+    private String appointmentId;
+    private String patientName;
+    private String doctorName;
+    private String date;
+    private Prescription prescription;
 
 
-    public Appointment(){};
+    public Appointment(){}
 
     public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
         this.appointmentId = appointmentId;
@@ -38,7 +38,7 @@ public class Appointment {
         this.patientName = patientName;
     }
 
-    public static String getDoctorName() {
+    public String getDoctorName() {
         return doctorName;
     }
 
