@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @OpenAPIDefinition(servers = {@Server(url = "/", description = "Hospital Management Server URL")})
 @SpringBootApplication
-public class HospitalManagementSystemApplication {
+public class HospitalManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HospitalManagementSystemApplication.class, args);
+		SpringApplication.run(HospitalManagementApplication.class, args);
 	}
 
 }
