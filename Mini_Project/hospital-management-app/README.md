@@ -13,11 +13,11 @@ mvn clean install
 mvn spring-boot:run
 ```
 ## Test Application
-# GET Doctor Controller (getAppointments)
+### GET Doctor Controller (getAppointments)
 ``` 
 curl --location --request GET 'localhost:8080/doctor/doctorappointment?doctorName=doc03' \--header 'Authorization: Basic ZG9jdG9yMTIzOnBhc3Nkb2MxMjM=' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
 ```
-# POST Doctor Controller (saveAppointment)
+### POST Doctor Controller (saveAppointment)
 ``` 
 curl --location --request POST 'localhost:8080/doctor/save' \--header 'Authorization: Basic ZG9jdG9yMTIzOnBhc3Nkb2MxMjM=' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
   "appointmentId": "a04",
@@ -27,11 +27,11 @@ curl --location --request POST 'localhost:8080/doctor/save' \--header 'Authoriza
   "prescription": {"prescriptionId": "p04","appointmentId": "a04","description": "Medicine B","patientName": "pat04","doctorName": "doc03"}
 }'
 ```
-# GET Patient Controller (getMyAppointment)
+### GET Patient Controller (getMyAppointment)
 ``` 
 curl --location --request GET 'localhost:8080/patient/myappointment?patientName=pat01' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' --header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
 ```
-# POST Patient Controller (saveAppointment)
+### POST Patient Controller (saveAppointment)
 ``` 
 curl --location --request POST 'localhost:8080/patient/save' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
   "appointmentId": "a01",
@@ -41,11 +41,11 @@ curl --location --request POST 'localhost:8080/patient/save' \--header 'Authoriz
   "prescription": {"prescriptionId": "p01","appointmentId": "a01","description": "Medicine abc","patientName": "pat01","doctorName": "doc01"}
 }'
 ```
-# GET Prescription Controller (getAllPrescriptions)
+### GET Prescription Controller (getAllPrescriptions)
 ``` 
 curl --location --request GET 'localhost:8080/viewprescription?patientName=pat03' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
 ```
-# POST Prescription Controller (savePrescription)
+### POST Prescription Controller (savePrescription)
 ``` 
 curl --location --request POST 'localhost:8080/saveprescription' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
     "prescriptionId": "p01",
@@ -57,7 +57,7 @@ curl --location --request POST 'localhost:8080/saveprescription' \--header 'Auth
 ```
 
 
-### Dockerization
+## Dockerization
 
 ## Creating a docker image
 ```
@@ -81,6 +81,6 @@ $ docker-compose down
 ```
 
 
-### Swagger 
+## Swagger 
 
 http://localhost:8080/swagger-ui.html
