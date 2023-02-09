@@ -15,11 +15,11 @@ mvn spring-boot:run
 ## Test Application
 ### GET Doctor Controller (getAppointments)
 ``` 
-curl --location --request GET 'localhost:8080/doctor/doctorappointment?doctorName=doc03' \--header 'Authorization: Basic ZG9jdG9yMTIzOnBhc3Nkb2MxMjM=' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
+curl --location --request GET 'localhost:8080/doctor/doctorappointment?doctorName=doc03' \--header 'Authorization: Basic ZG9jdG9yOnBhc3Nkb2MxMjM=' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86'
 ```
 ### POST Doctor Controller (saveAppointment)
 ``` 
-curl --location --request POST 'localhost:8080/doctor/save' \--header 'Authorization: Basic ZG9jdG9yMTIzOnBhc3Nkb2MxMjM=' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
+curl --location --request POST 'localhost:8080/doctor/save' \--header 'Authorization: Basic ZG9jdG9yOnBhc3Nkb2MxMjM=' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86' \--data-raw '{
   "appointmentId": "a04",
   "patientName": "pat04",
   "doctorName": "doc03",
@@ -29,11 +29,11 @@ curl --location --request POST 'localhost:8080/doctor/save' \--header 'Authoriza
 ```
 ### GET Patient Controller (getMyAppointment)
 ``` 
-curl --location --request GET 'localhost:8080/patient/myappointment?patientName=pat01' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' --header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
+curl --location --request GET 'localhost:8080/patient/myappointment?patientName=pat01' \--header 'Authorization: Basic cGF0aWVudDpwYXNzcGF0MTIz' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86'
 ```
 ### POST Patient Controller (saveAppointment)
 ``` 
-curl --location --request POST 'localhost:8080/patient/save' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
+curl --location --request POST 'localhost:8080/patient/save' \--header 'Authorization: Basic cGF0aWVudDpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86' \--data-raw '{
   "appointmentId": "a01",
   "patientName": "pat01",
   "doctorName": "doc01",
@@ -43,11 +43,11 @@ curl --location --request POST 'localhost:8080/patient/save' \--header 'Authoriz
 ```
 ### GET Prescription Controller (getAllPrescriptions)
 ``` 
-curl --location --request GET 'localhost:8080/viewprescription?patientName=pat03' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F'
+curl --location --request GET 'localhost:8080/viewprescription?patientName=pat03' \--header 'Authorization: Basic cGF0aWVudDpwYXNzcGF0MTIz' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86'
 ```
 ### POST Prescription Controller (savePrescription)
 ``` 
-curl --location --request POST 'localhost:8080/saveprescription' \--header 'Authorization: Basic cGF0aWVudDEyMzpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=2AA0689D3FCE5D7997231A29E716A26F' \--data-raw '{
+curl --location --request POST 'localhost:8080/saveprescription' \--header 'Authorization: Basic cGF0aWVudDpwYXNzcGF0MTIz' \--header 'Content-Type: application/json' \--header 'Cookie: JSESSIONID=FFDEECB61E8E1181532838B0FA74ED86' \--data-raw '{
     "prescriptionId": "p01",
     "appointmentId": "a01",
     "description": "Medicine xyz",
@@ -84,3 +84,8 @@ $ docker-compose down
 ## Swagger 
 
 http://localhost:8080/swagger-ui.html
+
+## Login Credentials
+USER - DOCTOR (Username - doctor, Password - passdoc123)
+USER - PATIENT (Username - patient, Password - passpat123)
+

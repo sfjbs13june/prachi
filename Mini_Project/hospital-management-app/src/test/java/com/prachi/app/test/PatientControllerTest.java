@@ -35,7 +35,7 @@ public class PatientControllerTest {
         appointment= Mockito.mock(Appointment.class);
     }
 
-    /*@Test
+    @Test
     public void TestGetAppointments() {
         List getMyAppointment = new ArrayList();
         when(appointmentRepository.findByPatientName(anyString())).thenReturn(getMyAppointment);
@@ -48,5 +48,5 @@ public class PatientControllerTest {
         when(appointmentRepository.save(any(Appointment.class))).thenReturn(savePatientAppointment);
         Appointment result = patientController.saveAppointment(appointment);
         assertEquals(savePatientAppointment, result);
-    }*/
+    }
 }
