@@ -1,0 +1,21 @@
+version: '3'
+services:
+  hospital-app:
+    image: prachi04/hospital-management-app:1.0.0
+    ports:
+      - "8080:8080"
+    environment:
+      spring.data.mongodb.uri: mongodb://mongo:27017/data
+    depends_on:
+      - mongo
+    networks:
+      - hospital-network
+  mongo:
+    image: mongo:3.4.7
+    ports:
+      - "27017:27017"
+    networks:
+      - hospital-network
+networks:
+  hospital-network:
+    driver: bridge
