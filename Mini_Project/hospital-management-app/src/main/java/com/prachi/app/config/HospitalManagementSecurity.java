@@ -24,8 +24,8 @@ public class HospitalManagementSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("Doctor123").password("{noop}passdoc123").roles("DOCTOR").and()
-                .withUser("Patient123").password("{noop}passpat123").roles("PATIENT");
+        auth.inMemoryAuthentication().withUser("doctor").password("{noop}passdoc123").roles("DOCTOR").and()
+                .withUser("patient").password("{noop}passpat123").roles("PATIENT");
     }
 }
 
