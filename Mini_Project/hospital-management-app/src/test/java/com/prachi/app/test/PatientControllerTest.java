@@ -2,6 +2,7 @@ package com.prachi.app.test;
 
 import com.prachi.app.controller.PatientController;
 import com.prachi.app.model.Appointment;
+import com.prachi.app.model.Prescription;
 import com.prachi.app.repository.AppointmentRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,16 +38,33 @@ public class PatientControllerTest {
 
     @Test
     public void TestGetAppointments() {
-        List getMyAppointment = new ArrayList();
+        List<Appointment> getMyAppointment = new ArrayList();
+        Prescription prescription1 = new Prescription("p01","a02","Medicine B","pat01","02");
+        Appointment appointmentpatient = new Appointment("a02","pat01","doc02","10-02-2023",prescription1);
+        getMyAppointment.add(appointmentpatient);
         when(appointmentRepository.findByPatientName(anyString())).thenReturn(getMyAppointment);
-        List result = patientController.getMyAppointments("pat01");
-        assertEquals(getMyAppointment, result);
+        List<Appointment> result = patientController.getMyAppointments("pat01");
+        assertEquals(getMyAppointment.size(), 1);
+        assertEquals(getMyAppointment.size(), 1);
+        assertEquals(getMyAppointment.get(0).getAppointmentId(),result.get(0).getAppointmentId());
+        assertEquals(getMyAppointment.get(0).getDate(),result.get(0).getDate());
+        assertEquals(getMyAppointment.get(0).getPatientName(),result.get(0).getPatientName());
+        assertEquals(getMyAppointment.get(0).getDoctorName(),result.get(0).getDoctorName());
+        assertEquals(getMyAppointment.get(0).getPrescription().getDescription(),result.get(0).getPrescription().getDescription());
     }
     @Test
     public void TestSaveAppointment() {
         Appointment savePatientAppointment=new Appointment();
+        savePatientAppointment.setAppointmentId("a03");
+        savePatientAppointment.setDate("10-2-2023");
+        savePatientAppointment.setDoctorName("doc04");
+        savePatientAppointment.setPatientName("pat04");
         when(appointmentRepository.save(any(Appointment.class))).thenReturn(savePatientAppointment);
         Appointment result = patientController.saveAppointment(appointment);
-        assertEquals(savePatientAppointment, result);
+        assertEquals(savePatientAppointment.getAppointmentId(), result.getAppointmentId());
+        assertEquals(savePatientAppointment.getDate(), result.getDate());
+        assertEquals(savePatientAppointment.getDoctorName(),result.getDoctorName());
+        assertEquals(savePatientAppointment.getPatientName(), result.getPatientName());
+
     }
 }
